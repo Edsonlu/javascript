@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-size: 2em;
+            background-color: rgb(196, 228, 193);
+        }
+        input {
+            font-size: 1em;
+            text-align: center;
+            background-color: rgb(133, 197, 176);
+        }
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <label for="velocidade">
+        Pais: <input type="string" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar"onclick='Calcular()' >
+        </label> 
+        <div id="res"></div>
+        <script>
+            function Calcular() {
+                var txtv = window.document.querySelector('input#txtvel')
+                var res = window.document.querySelector('div#res')
+                var vel = String(txtv.value)
+                var Pais = String(txtv.value)
+                res.innerHTML = `<p> Voce digitou <strong> ${vel} </strong></p>`
+                if (Pais == "Brasil") {
+                    res.innerHTML += `<p>Sendo assim você é <strong>brasileiro  </p>`
+                    res.innerHTML += `<p>Seu caba bom danado da gota serena </p>`
+                } else {
+                    res.innerHTML += `<p>Sendo assim você é <strong> estrangeiro </strong>. Tenha um bom dia! </p>`
+                    res.innerHTML += `<p> <strong>Forasteiro  </strong>seja bem vindo ao Brasil </p>`
+                }        
+            }
+        </script>
+</body>
+</html>

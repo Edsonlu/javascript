@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detram</title>
+    <style>
+        body {
+            font-size: 2em;
+            background-color: rgb(196, 228, 193);
+        }
+        input {
+            font-size: 1em;
+            text-align: center;
+            background-color: rgb(133, 197, 176);
+        }
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="velocidade">
+    velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar"onclick='Calcular()' >
+    </label> 
+    <div id="res"></div>
+    <script>
+        function Calcular() {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p> Sua velocidade atual é de <strong> ${vel}Km/h </strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p> Você está sendo <strong> MULTADO </strong>por excesso de velocidade </p>`
+            }
+            res.innerHTML += `<p> Dirija sempre com o cinto de segurança. Tenha um bom dia! </p>`
+        }
+    </script>
+</body>
+</html>
