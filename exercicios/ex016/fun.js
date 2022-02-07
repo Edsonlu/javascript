@@ -1,8 +1,8 @@
 function parimoar(n) {
     if (n % 2 == 0) {
-        return `par!`
+        return `Par!`
     }else {
-        return `impar!`
+        return `Impar!`
     }
 }
 console.log(parimoar(223))

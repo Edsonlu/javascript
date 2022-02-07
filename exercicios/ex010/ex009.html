@@ -34,10 +34,15 @@
                 var vel = String(txtv.value)
                 var Pais = String(txtv.value)
                 res.innerHTML = `<p> Voce digitou <strong> ${vel} </strong></p>`
-                if (Pais == "Brasil") {
+                if (Pais == "Brasil" ) {
                     res.innerHTML += `<p>Sendo assim você é <strong>brasileiro  </p>`
                     res.innerHTML += `<p>Seu caba bom danado da gota serena </p>`
-                } else {
+                } else if (Pais == "brasil") {
+                    res.innerHTML += `<p>Sendo assim você é <strong>brasileiro  </p>`
+                    res.innerHTML += `<p>Seu caba bom danado da gota serena </p>`
+
+                }
+                else {
                     res.innerHTML += `<p>Sendo assim você é <strong> estrangeiro </strong>. Tenha um bom dia! </p>`
                     res.innerHTML += `<p> <strong>Forasteiro  </strong>seja bem vindo ao Brasil </p>`
                 }        

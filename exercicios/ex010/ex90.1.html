@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Nome</title>
+    <style>
+        body {
+            font-size: 2em;
+            background-color: rgb(196, 228, 193);
+        }
+        input {
+            font-size: 1em;
+            text-align: center;
+            background-color: rgb(133, 197, 176);
+        }
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisador de Nome</h1>
+    <label for="Nacionalidade">
+        Digite seu nome: <input type="string" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar"onclick='Analisar()' >
+        </label> 
+        <div id="res"></div>
+        <script>
+            function Analisar() {
+                var txtv = window.document.querySelector('input#txtvel')
+                var res = window.document.querySelector('div#res')
+                var vel = String(txtv.value)
+                var Nome = String(txtv.value)
+                res.innerHTML = `<p> Voce digitou <strong> ${vel} </strong></p>`
+                if (Nome == "Rosa" ) {
+                    res.innerHTML += `<p>Seu nome é muito lindo!!!  </p>`
+                    res.innerHTML += `<p>Você é a mãe do senhor Edson </p>`
+                }else if (Nome == "Henrique") {
+                    res.innerHTML += `<p> Você é filho do senhor Edson</p> 
+                    Seu nome também é muito lindo, parabéns`
+                }else if (Nome == 'Kelly'){
+                    res.innerHTML += `<p> Você é sobrinha do senhor Edson </p>
+                    <p>Seu nome também é lindissimo </p>`
+                }else if (Nome == 'Aldilene'){
+                    res.innerHTML += `<p> Você é irmã do senhor Edson </p>
+                    <p>Seu nome também é lindissimo </p>`
+                }else if (Nome == 'Ismael'){
+                    res.innerHTML += `<p> Você é irmão do senhor Edson </p>
+                    <p>Seu nome também é lindissimo </p>`
+                }else if (Nome == 'Camila'){
+                    res.innerHTML += `<p> Você é sobrinha do senhor Edson </p>
+                    <p>Seu nome também é lindissimo </p>`
+                }else if (Nome == 'Lucca'){
+                    res.innerHTML += `<p> Você é sobrinho neto do senhor Edson </p>
+                    <p>Seu nome também é lindissimo </p>`  
+                }else if (Nome == "Edson") {
+                    res.innerHTML += `<p>Seu nome é muito lindo!!!  </p>`
+                    res.innerHTML += `<p>Você tem muita sorte de ter um nome tão lindo assim. </p>`
+                } else  {
+                    res.innerHTML += `<p>Seu nome é muito mixuruco </p>`
+                    res.innerHTML += `<p>Você não teve tanta sorte assim</p>`
+                }        
+            }
+        </script>
+</body>
+</html>

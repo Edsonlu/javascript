@@ -25,3 +25,7 @@ div {
     text-align: center;
     padding: 8px;
 }
+img {
+    border-radius: 100%;
+    padding: 10px;
+}
