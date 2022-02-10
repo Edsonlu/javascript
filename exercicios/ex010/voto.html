@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body {
+            font-size: 2em;
+            background-color: rgb(196, 228, 193);
+        }
+        input {
+            font-size: 1em;
+            text-align: center;
+            background-color: rgb(133, 197, 176);
+        }
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de votação</h1>
+    <section>
+        <div>
+            <p>Ano de nascimento</p>
+                <label for="txt">
+                <p>Ano <input type="number" name="txtano" id="txtano" min="0"></p>
+                <p>Sexo
+                    <input type="radio" name="radsex" id="mas" checked>
+                    <label for="mas" >Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem" >Feminino</label>
+                </label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
+        </div>
+        <div id="res">
+        </div>
+        <div id="resm">
+
+        </div>
+    </section>
+    <script>
+        function verificar() {
+    var data = new Date()
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.querySelector('div#res')
+    if (fano.value.length == 0 || Number(fano.nodeValue) > ano) {
+    window.alert(`[ERRO![ Verifique os dados e tente novamente!`)
+    }else {
+        var fsex = document.getElementsByName('radsex')
+        var idade = ano - Number(fano.value)
+        var gênero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+        if (fsex[0].checked) {
+            gênero = 'Homem'
+            if (idade < 15) {
+            resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso não vota`
+            }else if (idade >= 16 && idade < 17) {
+                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Seu voto é opcional`
+            } else if (idade >= 18 && idade < 64) {
+                resm.innerHTML = `Você tem ${idade} anos. <br>Seu voto é obrigatório`
+            } else if (idade > 65) {
+                resm.innerHTML = `Você tem ${idade} anos. <br>O seu voto é opcional`
+            }
+            } else if (fsex[1].checked) {
+                gênero = 'Mulher'
+            if (idade < 15) {
+                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso não vota`
+            } else if (idade >= 16 && idade < 17) {
+                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Seu voto é opcional`
+            } else if (idade >= 18 && idade < 64) {
+                resm.innerHTML = `Você tem ${idade} anos. <br>Seu voto é obrigatório`
+            } else if (idade > 65) {
+                resm.innerHTML = `Você tem ${idade} anos. <br>O seu voto é opcional`
+            }
+        }
+        res.style.textAlign = 'center'
+        resm.style.textAlign = 'center'
+        res.innerHTML = `Detectamos ${gênero} com ${idade} anos`
+    }
+}
+    </script>
+</body>
+</html>
