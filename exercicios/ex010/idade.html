@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voto</title>
+    <title>Idade</title>
     <style>
         body {
             font-size: 2em;
@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <h1>Sistema de votação</h1>
+    <h1>Sistema de idade</h1>
     <section>
         <div>
             <p>Ano de nascimento</p>
@@ -45,7 +45,7 @@
         </div>
     </section>
     <script>
-    function verificar() {
+        function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
@@ -61,24 +61,24 @@
         if (fsex[0].checked) {
             gênero = 'Homem'
             if (idade < 15) {
-            resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso não vota`
+            resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso você é menor de idade`
             }else if (idade >= 16 && idade < 17) {
-                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Seu voto é opcional`
+                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso você é menor de idade`
             } else if (idade >= 18 && idade < 64) {
-                resm.innerHTML = `Você tem ${idade} anos. <br>Seu voto é obrigatório`
+                resm.innerHTML = `Você tem ${idade} anos. <br>Por isso você é maior de idade`
             } else if (idade > 65) {
-                resm.innerHTML = `Você tem ${idade} anos. <br>O seu voto é opcional`
+                resm.innerHTML = `Você tem ${idade} anos. <br>Por isso você é maior de idade`
             }
             } else if (fsex[1].checked) {
                 gênero = 'Mulher'
             if (idade < 15) {
-                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso não vota`
+                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso você é menor de idade`
             } else if (idade >= 16 && idade < 17) {
-                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Seu voto é opcional`
+                resm.innerHTML = `Você tem apenas ${idade} anos. <br>Por isso você é menor de idade`
             } else if (idade >= 18 && idade < 64) {
-                resm.innerHTML = `Você tem ${idade} anos. <br>Seu voto é obrigatório`
+                resm.innerHTML = `Você tem ${idade} anos. <br>Por isso você é maior de idade`
             } else if (idade > 65) {
-                resm.innerHTML = `Você tem ${idade} anos. <br>O seu voto é opcional`
+                resm.innerHTML = `Você tem ${idade} anos. <br>Por isso você é maior de idade`
             }
         }
         res.style.textAlign = 'center'
@@ -86,6 +86,10 @@
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos`
     }
 }
+        
     </script>
+
+    
 </body>
+
 </html>
