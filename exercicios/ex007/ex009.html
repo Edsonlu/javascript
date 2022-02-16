@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou impar</title>
+    <style>
+        h1 {
+            background-color: aquamarine;
+            font-size: 1.3em;
+        }
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 16pt Arial;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            box-sizing: inherit;
+            margin-top: 10px;
+        }
+        div#res, div#res2 {
+            font: normal 19pt Arial;
+            margin-top: 20px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite um número para verificar se ele é par ou impar</h1>
+    <label for="parimpar">
+    Digite um número: <input type="number" name="nunber" id="parimpar">
+    <input type="button" value="parimpar" onclick="parimpar()">
+    </label>
+    <div id="res">Aguarde a resposta</div>
+    <script>
+        function parimpar(num) {
+            var num = window.document.getElementById("parimpar")
+            var num = (num.value)
+            var res = window.document.getElementById("res")
+            var msg = window.document.getElementById('msg')
+            var valor = num % 2
+            res.innerHTML = `Você digitou ${valor}`
+            if (num % 2 == 0) {
+                res.innerHTML = `Voce digitou<strong> ${num}</strong> este número é <strong>Par</strong>`
+            }else {
+                res.innerHTML = `Você digitou<strong> ${num}</strong> este número é <strong>Impar</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

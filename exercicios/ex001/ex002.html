@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardando dados</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: black;
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: red;
+        }
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!!!</p>
+</body>
+    <script>
+        window.alert('Minha primeira mensagem de alerta') //apenas uma mensagem
+        window.confirm('Está gostando de JS?') // Apenas uma pergunta
+        var nome = window.prompt('Qual é o seu nome?') 
+        var nasc = window.prompt('Qual é a sua data de nascimento?')
+        var end = window.prompt('Qual é o seu endereço atual?')
+        window.document.write(`Seu nome é ${nome} <br>`)
+        window.document.write(`Prazer em conhece-lo senhor ${nome}! <br>`)
+        window.document.write(`Você nasceu em ${nasc} <br>`)
+        window.document.write(`Seu endereço atual é ${end}`)
+        window.confirm(`Essas informações estão corretas?`)
+
+    </script>
+</html>

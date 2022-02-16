@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo</title>
+    <style>
+        body {
+            font-size: 2em;
+            background-color: rgb(196, 228, 193);
+        }
+        input {
+            font-size: 1em;
+            text-align: center;
+            background-color: rgb(133, 197, 176);
+        }
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inserindo dados</h1>
+    <label for="Nacionalidade">
+        Digite seu nome: <input type="string" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar"onclick='Analisar()' >
+        </label> 
+        <div id="res"></div>
+        
+        <script>
+            function Analisar() {
+                var txtv = window.document.querySelector('input#txtvel')
+                var res = window.document.querySelector('div#res')
+                var vel = String(txtv.value)
+                var Nome = String(txtv.value)
+                res.innerHTML = `<p> Voce digitou <strong> ${vel} </strong></p>`
+                if (Nome == "Edson" ) {
+                    res.innerHTML += `<p>Prazer em conheçe-lo senhor ${Nome} </p>`
+                    res.innerHTML += `Em que posso lhe ajudar </p>`
+                } else  {
+                    res.innerHTML += `<p>Vem cá, te conheço!!! </p>`
+                    res.innerHTML += `<p>Suma agora ou cale-se para sempre</p>`
+                }        
+            }
+        </script>
+        
+    
+</body>
+</html>

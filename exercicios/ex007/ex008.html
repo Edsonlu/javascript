@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando dados </title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 19pt Arial;
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            box-sizing: inherit;
+            margin-top: 10px;
+        }
+        div#res, div#res2, div#res3, div#res4, div#res5 {
+            font: normal 19pt Arial;
+            margin-top: 20px;
+            background-color: aquamarine;
+        }
+        h1 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe os dados solicitados</h1>
+    <label for="string">
+        Digite o seu nome: <input type="string" name="txtn" id="txtn">
+        <input type="button" value="analisar" onclick="analisar() " ><BR>
+        Digite o seu endereço: <input type="string" name="txtn" id="txte"><br>
+        Digite a data de nascimento: <input type="string" name="txtd" id="txtd"><br>
+        Telefone para contato: <input type="string" name="telefone" id="txtf"><br>
+        e-mail para contato: <input type="email" name="email" id="txtm">
+        </label>
+        <div id="res">Resultado</div>
+        <div id="res2"></div>
+        <div id="res3"></div>
+        <div id="res4"></div>
+        <div id="res5"></div>
+        <script>
+            function analisar() {
+                var nome = window.document.getElementById('txtn')
+                var nome = (nome.value)
+                var endereço = window.document.getElementById('txte')
+                var endereço = (endereço.value)
+                var nascimento = window.document.getElementById('txtd')
+                var nascimento = (nascimento.value)
+                var Contato = window.document.getElementById('txtf')
+                var Contato = (Contato.value)
+                var mail = window.document.getElementById('txtm')
+                var mail = (mail.value)
+                var res = window.document.getElementById('res')
+                res.innerHTML = `Nome <strong> ${nome} </strong>`
+                res2.innerHTML = `Endereço<strong> ${endereço}</strong>`
+                res3.innerHTML = `Data de nascimento<strong> ${nascimento}</strong>`
+                res4.innerHTML = `Telefone para contato <strong>${Contato}</strong>`
+                res5.innerHTML = `e-mail para contato <strong>${mail}</strong>`
+            }
+        </script>
+</body>
+</html>
