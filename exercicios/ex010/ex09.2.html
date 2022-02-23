@@ -29,6 +29,18 @@
         h1 {
             background-color: aquamarine;
         }
+        strong {
+            color: green;
+            font-size: 1.5em;
+        }
+        strong#recuperação {
+            color: rgb(230, 230, 18);
+            font-size: 1.5em;
+        }
+        strong#reprovado {
+            color: red;
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
@@ -51,10 +63,10 @@
             //res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média}`
             if (média <= 7 && média > 0){
                 res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média} `
-                inf.innerHTML = `Aluno <strong>Reprovado </strong>`
+                inf.innerHTML = `Aluno <strong id="reprovado" >Reprovado </strong>`
             } if  (média <= 7 && média >= 5) {
                 res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média} `
-                inf.innerHTML = `Aluno em <strong>Recuperação</strong>`
+                inf.innerHTML = `Aluno em <strong id="recuperação" >Recuperação</strong>`
             }else if (média > 7)  {
                 res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média} `
                 inf.innerHTML = `Aluno <strong> Aprovado</strong>`
