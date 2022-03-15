@@ -2,7 +2,6 @@ let num = document.querySelector('input#fnum')
 let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
 let valores = []
-let troco = document.querySelector('input#dnum')
 
 function isNumero(n) {
     if (Number(n) >= 1 && Number(n) <= 100) {
@@ -33,6 +32,12 @@ function adicionar() {
     num.value = ''
     num.focus()
 }
+function troco() {
+    var dinheiro = window.document.getElementById('dnum')
+    var dinheiro = (dinheiro.value)
+    var troco = (troco.value)
+    var troco = (dinheiro - soma)
+}
 
 function finalizar() {
     if (valores.length == 0) {
@@ -49,15 +54,14 @@ function finalizar() {
                 maior = valores[pos]
             if (valores[pos] < menor)
                 menor = valores[pos]
-        }   
+        }
         media = soma / tot
         res.innerHTML = ''
-        //res.innerHTML += `<p> Ao todo, temos ${tot} números cadastrados. </p>`
-       // res.innerHTML += `<p> O maior valor informado foi ${maior}.</p>`
-        //res.innerHTML += `<p> O menor valor informado foi ${menor}.</p>`
-        res.innerHTML += `<p>Total R$ ${soma}</p>`
-        res.innerHTML += `Dinheiro `
-        //res.innerHTML += `<p> A média dos valores digitados é ${media}.</p>`
-        res.innerHTML += `Troco ${dnum}`
+        res.innerHTML += `<p> Ao todo, temos ${tot} números cadastrados. </p>`
+        res.innerHTML += `<p> O maior valor informado foi ${maior}.</p>`
+        res.innerHTML += `<p> O menor valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p> Somando todos os valores temos ${soma}.${troco}</p>`
+        res.innerHTML += `<p> A média dos valores digitados é ${media}.</p>`
+    
     }
 }
