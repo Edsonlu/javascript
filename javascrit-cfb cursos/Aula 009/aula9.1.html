@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Média dos alunos</title>
-    <style>
-         body {
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 9.1 if com multiplos retornos </title>
+  <style>
+    body {
             font: normal 18pt Arial;
         }
         input {
@@ -41,10 +41,10 @@
             color: red;
             font-size: 1.5em;
         }
-    </style>
+  </style>
 </head>
 <body>
-    <h1>Média dos alunos</h1>
+  <h1>Média dos alunos</h1>
     <label for="number">
     Primeira nota do aluno <input type="number" name="txtn1" id="txtn1"> 
     Segunda nota do aluno <input type="number" name="txtn2" id="txtn2">
@@ -53,7 +53,7 @@
     <div id="res">Resultado</div>
     <div id="inf"></div>
     <script>
-        function somar() {
+      function somar() {
             var tn1 = window.document.getElementById('txtn1')
             var tn2 = window.document.getElementById('txtn2')
             var res = window.document.getElementById('res')
@@ -61,18 +61,17 @@
             var n2 = Number(tn2.value)
             var média = (n1 + n2) / 2
             //res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média}`
-            if (média <= 5 && média > 0){
+            if (média <= 4.99 && média > 0){
                 res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média} `
                 inf.innerHTML = `Aluno <strong id="reprovado" >Reprovado </strong>`
-            } if  (média <= 6 && média >= 5) {
+            } if  (média <= 5.99 && média >= 4.99) {
                 res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média} `
                 inf.innerHTML = `Aluno em <strong id="recuperação" >Recuperação</strong>`
-            }else if (média >= 6)  {
+            }if (média >= 6)  {
                 res.innerHTML = `As notas foram ${n1} e ${n2} <br>A média do aluno foi ${média} `
                 inf.innerHTML = `Aluno <strong> Aprovado</strong>`
             }
-        } 
+        }
     </script>
 </body>
-    
 </html>
