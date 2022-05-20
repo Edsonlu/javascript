@@ -4,40 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CFB-Cursos js aula 26 queryselectorall</title>
-  <style>
-    .titulo {
-      color: #f00;
-      font-size: 20px;
-      text-decoration: underline;
-    }
-    div {
-      border: 1px solid black;
-      padding: 10px;
-      display: inline-block;
-    }
-    a {
-      display: block;
-    }
-  </style>
+  <title>aula 26.12</title>
+  <link rel="stylesheet" href="aula26.css">
 </head>
 <body>
   <h1 class="titulo">queryselectorall</h1>
   <p>O queryselectorall é um método que retorna os elementos do documento que correspondem a uma classe de CSS ou uma tag específica</p>
   <h2 class="titulo">Curso de javascript</h2>
   <p>www.youtube.com/cfbcursos</p>
-  <p>cfbcursos.com.br</p>
+  <p class="titulo">cfbcursos.com.br</p>
   <div>
+    <h3>Curso de javascript</h3>
     <p>Este texto está dentro de uma div</p>
     <p>Este também</p>
   </div>
+
+  <div class="quadro">
+    <h3>Curso de javascript</h3>
+    <p>Este texto está dentro de uma div</p>
+    <p>Este também</p>
+  </div>
+
     <a href="http://www.youtube.com./cfbcursos" target="_blank">Canal</a>
     <a href="http://cfbcursos.com.br">Site</a>
   <hr>
 
   <script>
-    var ps=document.querySelectorAll("p")
-    document.write(ps[0].innerHTML)
+    var elementos=document.querySelectorAll("h1, h2, h3")
+    for(var i=0; i<elementos.length;i++) {
+      elementos[i].style.color="green"
+    }
   </script>
 </body>
 </html>
