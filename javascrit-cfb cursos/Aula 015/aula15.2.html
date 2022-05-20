@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CFB-Cursos js aula 15 array vetor parte 3</title>
+  <title>aula 15.2</title>
   <script>
-    var mochila=[]
-
+    var mochila=[],pos
       mochila.push("Faca")
       mochila.push("Corda")
       mochila.push("Pederneira")
       mochila.push("Chave")
       mochila.push("Lanterna")
-      mochila.unshift("Pedra")
+      mochila.push("Pedra")
 
-      document.write(mochila.indexOf("Lanterna"))
-      document.write(mochila.indexOf("Arame"))
-
+      pos=mochila.indexOf("Pedra")
+    if (pos<0) {
+      document.write("Item não está na mochila <br>")
+    }else {
+      document.write("Item está na mochila <br> Posição:  "+pos)
+    }
   </script>
 </head>
 <body>

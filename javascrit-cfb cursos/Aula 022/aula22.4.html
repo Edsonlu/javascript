@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 22.4</title>
+  <script>
+    var num//valor máximo 10
+    try {
+      num=prompt("Digite um valor entre 1 e 10 ")
+
+      if(num>10) {
+        throw new Error("Valor inválido, o valor deve ser menor ou igual a 10 <br>")
+      }
+      document.write("valor: " + num)
+    }catch(e) {
+      document.write("ERRO!!!" + e.message)
+    }finally {
+      document.write("<br> Fim do tratamento de erro")
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
