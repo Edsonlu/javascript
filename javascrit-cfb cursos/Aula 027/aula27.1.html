@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CFB-Cursos js aula 27 manipulando forms com js</title>
+  <title>aula 27.1</title>
   <style>
     label {
       display: block;
@@ -18,9 +18,9 @@
   </style>
 </head>
 <body>
-  <form action="#"name="curso1" method="post">
+  <form action="#"name="curso1" id="curso1" method="post">
     <label for="#">Nome <br>
-    <input type="text nameFnome" id="teste" value="Primeiro - 1">
+    <input type="text nameFnome" id="teste1" value="Primeiro - 1">
   </label>
     <label for="#">Senha <br>
     <input type="password" name="fsenha" value="123"><br>
@@ -29,9 +29,9 @@
   </form>
   <hr>
 
-  <form action="#"name="curso1" method="post">
+  <form action="#"name="curso1" id="curso2" method="post">
     <label for="#">Nome <br>
-    <input type="text nameFnome" id="teste" value="Primeiro - 1">
+    <input type="text nameFnome" id="teste2" value="Segundo - 2">
   </label>
     <label for="#">Senha <br>
     <input type="password" name="fsenha" value="123"><br>
@@ -41,7 +41,7 @@
   <hr>
 
   <script>
-    var fm=document.forms.length
+    var fm=document.forms[0].id
     document.write(fm)
   </script>
 </body>

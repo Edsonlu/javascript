@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 27.5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="#"name="curso1" id="curso1" method="post">
+    <label for="#">Nome <br>
+    <input type="text nameFnome" id="teste1" value="Primeiro - 1">
+  </label>
+    <label for="#">Senha <br>
+    <input type="password" name="fsenha" value="123"><br>
+  </label>
+    <input type="submit" name="btenviar" value="Enviar">
+  </form>
+  <hr>
+
+  <script>
+    var fm=document.forms[0]
+    var el=fm.elements
+
+    for(var i=0; i<el.length-1;i++) {
+      el[i].style.backgroundColor="#ddd"
+      el[i].value="CFB-Cursos"
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 32.2</title>
+  <style>
+    #dv1 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function mudaCor(obj, cor) {
+      obj.style.backgroundColor=cor
+    }
+  </script>
+  <div id="dv1" onmouseover="mudaCor(this, 'red' )" onmouseout="mudaCor(this, 'green')"></div>
+  <br>
+  <button type="submit" onclick="alert('CFB-Cursos')"onmouseover="mudaCor(document.getElementById('dv1'),'#00f')">Clique em mim</button>
+</body>
+</html>
