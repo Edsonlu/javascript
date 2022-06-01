@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB-Cursos js aula 46 strings parte 1</title>
+</head>
+<body>
+  <p id="txt">CFB-Cursos - Curso de javascript - aula 46 do curso de Javascript</p>
+
+  <script>
+    var texto=document.getElementById("txt").innerHTML
+    var res=texto.match("aula")
+    document.write(res+"<br>")
+
+    var res=texto.match("html")//null refere-se a palavra html não encontrada
+    document.write(res+"<br>") 
+
+    var res=texto.match("aula")
+    document.write(res.length+"<br>")
+
+    var res=texto.match("Curso")
+    document.write(res+"<br>")
+    document.write(res.length+"<br>")
+
+    var res=texto.match(/de/g)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/Javascript/g)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/Javascript/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    document.write(res[0]+"<br>")
+    document.write(res[1]+"<br>")
+
+    var res=texto.match(/o/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[oa]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[^oa]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[^s]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[a-g]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[a|o|e]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[aoe]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/[^a-g]/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/\d/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/\D/ig)
+    document.write(res + ":" + res.length+"<br>")
+
+    var res=texto.match(/\w/ig)
+    document.write(res + ":" + res.length)
+
+  
+  </script>
+</body>
+</html>

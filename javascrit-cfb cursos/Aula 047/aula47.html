@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB-Cursos js aula 47 metodo source </title>
+  <style>
+    body {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <p id="txt">CFB-Cursos - Curso de Javascript aula 47 do curso de javascript </p>
+
+  <script>
+    var texto=document.getElementById("txt").innerHTML
+
+    var res=texto.match(/curso/ig)
+    document.write(res + " ; " + res.length + "<br>")
+    document.write(res[1]+"<br>")
+
+    var res=texto.search(/curso/i)
+    document.write(res+"<br>")
+
+    var res=texto.search(/aula/i)
+    document.write(res+"<br>")
+
+    var res=texto.replace(/curso/i,"aula")
+    document.write(res+"<br>")
+
+    var res=texto.replace(/curso/ig,"aula")
+    document.write(res+"<br>")
+
+    var res=texto.charAt(2)
+    document.write(res+"<br>")
+
+    var res=texto.charAt(11)
+    document.write(res+"<br>")
+
+    var res=texto.charCodeAt(11)
+    document.write(res+"<br>")
+
+    var res=texto.charCodeAt(0)
+    document.write(res+"<br>")
+
+    var res=texto.charCodeAt(0)
+    document.write(res+"<br>")
+    document.write(String.fromCharCode(67)+"<br>")
+
+    var res=texto.charCodeAt(0)
+    //document.write(res+"<br>")
+    document.write(String.fromCharCode(res))
+  </script>
+</body>
+</html>

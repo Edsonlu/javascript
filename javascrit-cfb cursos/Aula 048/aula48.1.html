@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 48.1</title>
+  <style>
+    body {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <p id="txt">CFB Cursos - Curso de Javascript</p>
+
+  <script>
+    var texto=document.getElementById("txt").innerHTML
+    var res=texto.slice(3,10)
+    document.write(res+"<br>")
+    
+    var res=texto.slice(22,32)
+    document.write(res+"<br>")
+    
+    var res=texto.split(" ")
+    document.write(res[0]+"<br>")
+
+    var res=texto.split(" ")
+    document.write(res[1]+"<br>")
+
+    var res=texto.split(" ")
+    document.write(res[5]+"<br>")
+
+    var res=texto.substr(4,6)
+    document.write(res+"<br>")
+
+    var res=texto.toLowerCase()
+    document.write(res+"<br>")
+
+    var res=texto.toUpperCase()
+    document.write(res+"<br>")
+
+    var res=texto.toUpperCase().substr(22,10)
+    document.write(res)
+  </script>
+</body>
+</html>
