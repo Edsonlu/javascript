@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB-Cursos js aula 63 Objeto window parte 2 </title>
+  <style>
+    #painel {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 15px;
+      width: 150px;
+      height: 100px;
+    }
+  </style>
+  <script>
+    var l,a,px,py,painel
+    l=window.innerWidth
+    a=window.innerHeight
+
+    function inicia(){
+      painel=document.getElementById("painel")
+      painel.innerHTML=l
+    }
+    window.addEventListener("load", inicia)
+  </script>
+</head>
+<body>
+  <button onclick=>Tamanho</button>
+  <div id="painel"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 63.2</title>
+  <style>
+    #painel {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 15px;
+      width: 150px;
+      height: 100px;
+    }
+  </style>
+  <script>
+    var l,a,px,py,painel
+    l=window.innerWidth
+    a=window.innerHeight
+
+    function info(){
+      l=window.innerWidth
+      a=window.innerHeight
+      px=window.screenX
+      py=window.screenY
+      painel.innerHTML="L:"+l+" -A:"+a+"<br>X:"+px+" -Y:"+py
+    }
+
+    function inicia(){
+      document.getElementById("btntam").addEventListener("click", info)
+      painel=document.getElementById("painel")
+      
+    }
+    window.addEventListener("load", inicia)
+  </script>
+</head>
+<body>
+  <button id="btntam">Tamanho</button>
+  <div id="painel"></div>
+</body>
+</html>

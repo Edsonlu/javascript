@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 64.5</title>
+</head>
+<body>
+  
+  <iframe src="aula64.4.html" frameborder="1"></iframe>
+  <iframe src="aula64.4.html" frameborder="1"></iframe>
+  <iframe src="aula64.4.html" frameborder="1"></iframe>
+
+  <button onclick="mudaCor('#f00')">Vermelho</button>
+  <button onclick="mudaCor('#0f0')">Verde</button>
+  <button onclick="mudaCor('#00f')">Azul</button>
+
+  <script>
+    function inicia(){
+      window.addEventListener("load", inicia)
+    }
+    function mudaCor(cor){
+      parent.document.body.style.backgroundColor=cor
+
+    }
+  </script>
+</body>
+</html>
