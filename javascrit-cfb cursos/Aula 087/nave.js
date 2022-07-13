@@ -122,8 +122,8 @@ function colisãoTiroBomba(tiro){
 }
 
 function criaExplosão(tipo,x,y){ //Explosão tipo 1 = Ar tipo 2 = Chão
-  if (document.getElementById("explosão"+(ie-3))){
-    document.getElementById("explosão"+(ie-3)).remove()
+  if (document.getElementById("explosão"+(ie-1))){
+    document.getElementById("explosão"+(ie-1)).remove() //Ultima alteração
 
   }
   var explosão=document.createElement("div")
@@ -146,7 +146,7 @@ function criaExplosão(tipo,x,y){ //Explosão tipo 1 = Ar tipo 2 = Chão
     att4.value="explosão_ar.gif?"+new Date() 
   }else{
     att1.value="explosãoChão"
-    att2.value="top:"+(tamTelaH-57)+"px;left:"+(x-17)+"px;"
+    att2.value="top:"+(tamTelaH-107)+"px;left:"+(x-17)+"px;"
     att4.value="explosão_chão.gif?"+new Date()
   }
   att5.value="exp1.mp3?"+new Date()
@@ -210,7 +210,7 @@ function reinicia(){
   telaMsg.style.display="none"
   clearInterval(tmpCriaBomba)
   cancelAnimationFrame(frames)
-  vidaPlaneta=300
+  vidaPlaneta=300 
   pjx=tamTelaW/2
   pjy=tamTelaH/2
   jog.style.top=pjy+"px"
@@ -232,16 +232,14 @@ function inicia(){
   dirxJ=diryJ=0
   pjx=tamTelaW/2
   pjy=tamTelaH/2
-  velJ=velT=5
+  velJ=velT=7
   jog=document.getElementById("naveJog")
   jog.style.top=pjy+"px"
   jog.style.left=pjx+"px"
 
   //Controle das Bombas
-  clearInterval(tmpCriaBomba)
-  contBombas=150 
-  velB=3
-  tmpCriaBomba=setInterval(criaBomba, 1700)
+  contBombas=150
+  velB=2
 
   //Controles do planeta
   vidaPlaneta=300
@@ -254,11 +252,8 @@ function inicia(){
   telaMsg=document.getElementById("telaMsg")
   telaMsg.style.backgroundImage="url('telainicial.jpg')"
   telaMsg.style.display="block"
-  document.getElementById("btnJogar").addEventListener("click", reinicia)
-
-  
+  document.getElementById("btnJogar").addEventListener("click", reinicia) 
 }
-
 window.addEventListener("load", inicia)
 document.addEventListener("keydown", teclaDw)
 document.addEventListener("keyup", teclaUp)

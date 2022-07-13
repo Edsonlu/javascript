@@ -45,9 +45,8 @@ body {
 }
 .explosãoChão {
   width: 55px;
-  height: 67px;
+  height: 87px;
   position: absolute;
-  line-height: normal;
 }
 .explosãoAr {
   width: 70px;
@@ -58,7 +57,8 @@ body {
   position: absolute;
   margin-left: -25%;
   top: 50px;
-  width: 720px;
-  height: 621px;
+  left: 50%;
+  width: 741px;
+  height: 499px;
   display: none;
 }
