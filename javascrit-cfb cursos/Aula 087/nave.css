@@ -4,7 +4,7 @@ body {
   background-color:white;
 }
 .naveJog {
-  width: 60px;
+  width: 55px;
   height: 80px;
   background-image: url("nave_Jog.gif");
   position: absolute;
@@ -20,18 +20,18 @@ body {
 }
 #medidorPlaneta {
   border: 2px solid #000;
-  width: 300px;
+  width: 600px;
   height: 20px;
   background-color: #fff;
 }
 #barraPlaneta {
-  width: 300px;
+  width: 600px;
   height: 20px;
   background-color: #66f;
 }
 
 .bomba {
-  width: 24px;
+  width: 27px;
   height: 40px;
   background-image: url("bomba.gif");
   position: absolute;

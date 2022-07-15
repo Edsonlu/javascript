@@ -210,14 +210,14 @@ function reinicia(){
   telaMsg.style.display="none"
   clearInterval(tmpCriaBomba)
   cancelAnimationFrame(frames)
-  vidaPlaneta=300 
+  vidaPlaneta=600 
   pjx=tamTelaW/2
   pjy=tamTelaH/2
   jog.style.top=pjy+"px"
   jog.style.left=pjx+"px"
   contBombas=150
   jogo=true
-  tmpCriaBomba=setInterval(criaBomba,1700)
+  tmpCriaBomba=setInterval(criaBomba,2000)
   gameLoop()
 }
 
