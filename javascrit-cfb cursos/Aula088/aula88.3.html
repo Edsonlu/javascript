@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 88.3</title>
+  <script>
+    function ativo(){
+     /* document.getElementById("texto_selecionado").innerHTML=document.activeElement.value.substring(document.activeElement.selectioStart,document.selectioEnd)*/
+    }
+    function inicia(){
+      var texto=document.getElementById("txt_original")
+      texto.addEventListener("mouseup", ativo)
+    }
+  </script>
+</head>
+<body>
+  <textarea name="" id="txt_original" cols="20" rows="10">Curso de Javascript - Aula 88 - Atributo activeElement</textarea>
+  <button id="btnCopiar">Copiar</button>
+  Texto Selecionado <span id="texto_selecionado"></span>
+</body>
+</html>
