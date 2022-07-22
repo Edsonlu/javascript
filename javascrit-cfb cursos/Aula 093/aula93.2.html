@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 93.2</title>
+  <style>
+    .dv {
+  width: 150px;
+  height: 303px;
+  cursor: pointer;
+  background-image: url("c1.jpg");
+  background-size: 150px 303px;
+  display: inline-block;
+}
+  </style>
+  <script>
+    var dv1, dv2, dv3, dv4
+
+window.addEventListener("load", inicia)
+
+function inicia(){
+  dv1=document.getElementById("dv1")
+  dv2=document.getElementById("dv2")
+  dv3=document.getElementById("dv3")
+  dv4=document.getElementById("dv4")
+
+  dv1.addEventListener("mouseover", troca)
+  dv1.addEventListener("mouseout", trocaOriginal)
+
+  dv2.addEventListener("mouseover", troca)
+  dv2.addEventListener("mouseout", trocaOriginal)
+
+  dv3.addEventListener("mouseover", troca)
+  dv3.addEventListener("mouseout", trocaOriginal)
+
+  dv4.addEventListener("mouseover", troca)
+  dv4.addEventListener("mouseout", trocaOriginal)
+}
+function troca(){
+  var obj=event.target
+  obj.style.backgroundImage="url('c2.jpg')"
+}
+function trocaOriginal(){
+  var obj=event.target
+  obj.style.backgroundImage="url('c1.jpg')"
+}
+  </script>
+</head>
+<body>
+  <div id="dv1" class="dv"></div>
+  <div id="dv2" class="dv"></div>
+  <div id="dv3" class="dv"></div>
+  <div id="dv4" class="dv"></div>
+</body>
+</html>
