@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 105.3</title>
+  <script>
+    const Carro={
+      marca : "WV",
+      modelo: "Golf",
+      info:function(){
+        console.log("Marca.: " + this.marca)
+        console.log("Modelo: " + this.modelo)
+      }
+    }
+    Carro.marca="Honda"
+    Carro.modelo="HRV"
+
+    Carro["marca"]="GM"
+    Carro["modelo"]="Camaro"
+
+    Carro.info()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
