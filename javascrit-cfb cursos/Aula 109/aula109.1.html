@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 109.1</title>
+  <script>
+    let produtos = new Map([
+      ["01",["Mouse", "R$10,75"]],
+      ["02", ["Teclado", "R$35,90"]],
+      ["03", ["Monitor", "R$450,50"]],
+      ["04", ["Gabinete", "R$150,00"]]
+    ])
+    produtos.set("05", ["Memória", "R$199,90"])
+
+    console.log("Tamanho: " + produtos.size)
+
+    for (p of produtos)
+    //console.log(p)
+    //console.log(p[0][1])
+    console.log(p[1][1])
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

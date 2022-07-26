@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 109.4</title>
+  <script>
+    let produtos = new Map([
+      ["01", "Mouse"],
+      ["02", "Teclado"],
+      ["03", "Monitor"],
+      ["04", "Gabinete"]
+    ])
+    produtos.set("05", "Memória")
+
+    console.log(produtos.has("02") ? "Produto encontrado" : "Produto não encontrado")
+    console.log(produtos.has("07") ? "Produto encontrado" : "Produto não encontrado")
+
+    function info(chave, valor){
+      console.log("Chave: " + chave + " - Valor: " + valor)
+    }
+    let itk = produtos.keys()
+    let itv = produtos.keys()
+
+    console.log(itk.next().value)
+    console.log(itv.next().value)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
