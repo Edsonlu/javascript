@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 121.2</title>
+</head>
+<body>
+  <script>
+    let pessoa=[
+      {nome: 'Edson', idade: 53},
+      {nome: 'Henrique', idade: 22},
+      {nome: 'Kaliana', idade: 27},
+      {nome: 'Kamila', idade: 25}
+    ]
+    let nomes=pessoa.reduce((p1,p2)=>{
+      p1.push(p2.nome)
+      return p1
+    },[])
+    console.log(nomes)
+
+    let idades=pessoa.reduce((p1,p2)=>{
+      p1.push(p2.idade)
+      return p1
+    },[])
+    console.log(idades)
+  </script>
+</body>
+</html>

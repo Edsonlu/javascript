@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 116.1</title>
+  <script>
+    function contar(n){
+      let cont=0
+      for(let i=0;i<n;i++){
+        cont++
+      }
+      return cont
+    }
+    function contarT(n){
+      let cont=0
+      let t=setTimeout(()=>{
+        for(let i=0;i<n;i++){
+          cont++
+        }
+      },2000)
+      return cont
+    }
+    function contarP(n){
+      let cont=0
+      let p = new Promise((resolve, reject) => {
+        for(let i=0;i<n;i++){
+          cont++
+        }
+        if(cont==n){
+          resolve(cont)
+        }else{
+          reject("ERRO!!!")
+        }
+      })
+      return cont
+    }
+    console.log(contar(10000))
+    contarP(10)
+    function then(){
+      then(sucesso => console.log('Sucesso: ' + sucesso))
+    }
+    
+      
+
+    
+    
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

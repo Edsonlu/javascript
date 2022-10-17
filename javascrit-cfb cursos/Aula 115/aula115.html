@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CFB-Cursos js POO parte 5 herança</title>
+  <title>CFB-Cursos js aula 115 Prototype</title>
   <script>
     class Carro{
       constructor(tpCarro,tpcomb){
@@ -63,15 +63,26 @@
         super(2,2)
       }
     }
-    
+    Carro.prototype.potência=0
+    Carro.prototype.velocidade=0
+    Carro.prototype.velMax=0
+
+    Carro.prototype.info2=function(){
+      console.log("Potência...:" + this.potência)
+      console.log("Velocidade.:" + this.velocidade)
+      console.log("Vel. Máxima: "+ this.velMax)
+      this.info()
+    }
     let c3=new CarroTransporte(75)
     let c2=new CarroCombate(100)
     let c1=new CarroCombate(50)
     
     c1.setLigado=true
     c1.info()
+    c1.info2()
     c2.info()
     c3.info()
+    c3.info2(2,2)
   </script>
 </head>
 <body>
