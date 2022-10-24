@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 130.4</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="desenho1" width="500" height="500"></canvas>
+
+  <script>
+    let canvas=document.getElementById('desenho1')
+    let ctx=canvas.getContext('2d')
+
+    function desenha(){
+      for(let i=0;i<10;i++){
+        ctx.beginPath()
+      ctx.fillStyle='rgb(255,0,0)'
+      ctx.arc(Math.random()*500,Math.random()*500,Math.random()*100,(Math.PI/180)*0,(Math.PI/180)*360,true)
+      ctx.fill()
+      }
+    }
+    desenha()
+  </script>
+</body>
+</html>

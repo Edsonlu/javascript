@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB Cursos js aula 128 movimentar elementos parte 3</title>
+  <style>
+    canvas{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="desenho1" height="500" width="500" ></canvas>
+  <script>
+    let canvas=document.getElementById("desenho1")
+    let ctx=canvas.getContext('2d')
+    let dx=1
+    let dy=0
+    let px=0
+    let py=0
+    let anima
+    let l_retangulo=a_retangulo=50
+    let l_canvas=a_canvas=500
+    function desenha(){
+      ctx.clearRect(0,0,l_canvas,a_canvas)
+
+      ctx.fillStyle='#f00'
+      ctx.fillRect(px,py,l_retangulo,a_retangulo)
+
+      ctx.lineWidth=3
+      ctx.stokeStyle='#000'
+      ctx.strokeRect(px,py,l_retangulo,a_retangulo)
+    
+      px+=dx
+      py+=dy
+
+      if((px<=0)&&(py<=0)){
+        dx=1
+        dy=0
+      }
+  
+      if((px+l_retangulo>=l_canvas)&&(py<=0)){
+        dx=0
+        dy=1
+      }
+
+      if((px+l_retangulo>=l_canvas)&&(py+a_retangulo>=a_canvas)){
+        dx=-1
+        dy=0
+      }
+      
+      if((px<=0)&&(py+a_retangulo>=a_canvas)){
+        dx=0
+        dy=-1
+      }
+      anima=requestAnimationFrame(desenha)
+
+    }
+    desenha()
+  </script>
+</body>
+</html>

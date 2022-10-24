@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 130.14</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="desenho1" width="500" height="500"></canvas>
+
+  <script>
+    let canvas=document.getElementById('desenho1')
+    let ctx=canvas.getContext('2d')
+    let tamMax=50
+    let tamMin=10
+    let maxCirculos=50
+    let anguloFinal=0
+    let anguloInicial=0
+
+    function desenha(){
+      ctx.clearRect(0,0,500,500)
+      //posiçãoX, posiçãoY, raio, anguloInicial, anguloFinal, Sentido
+      //sentido: true=horário / False anti-horário
+      //(PI/180)*angulo_grau 
+      for(let i=0;i<maxCirculos;i++){
+        ctx.beginPath()
+        ctx.fillStyle='rgb('+Math.random()*250+','+Math.random()*255+','+Math.random()*250+')'
+        ctx.arc(Math.random()*500,Math.random()*500,Math.random()*tamMax+tamMin,(Math.PI/180)*0,(Math.PI/180)*360,true)
+        ctx.fill()
+      }
+        ctx.beginPath()
+        ctx.fillStyle='#000'
+        ctx.arc(250,250,200,(Math.PI/180)*anguloInicial,(Math.PI/180)*anguloFinal,false)
+        ctx.fill()
+
+        anguloFinal++
+        if(anguloFinal>360){
+          anguloFinal=0
+        }
+          
+        
+
+        anima=requestAnimationFrame(desenha)
+    }
+    desenha()
+  </script>
+</body>
+</html>

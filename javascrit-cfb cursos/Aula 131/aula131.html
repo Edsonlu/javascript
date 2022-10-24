@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB Cursos js aula 131 Função arc To do Canvas</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="desenho1" width="500" height="500"></canvas>
+
+  <script>
+    let canvas=document.getElementById("desenho1")
+    let ctx=canvas.getContext('2d')
+
+    //x1. y1, x2, y2, raio
+
+    ctx.moveTo(0,0)
+    ctx.lineTo(250,250)
+    ctx.lineTo(500,0)
+    ctx.stroke()
+  </script>
+</body>
+</html>
