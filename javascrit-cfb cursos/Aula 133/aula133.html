@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB Cursos js aula 133 sprite sheet</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <img src="cores.png" alt=""><br>
+  <canvas id="desenho1" width="500" height="500"></canvas>
+
+  <script>
+    let canvas=document.getElementById("desenho1")
+    let ctx=canvas.getContext('2d')
+
+    let cores=new Image()
+    cores.src="cores.png"
+    let numSprite=0
+    let posIniX=0
+    let Limagem=0
+    let LargSprite=0
+    let nunSpries=4
+    
+    cores.addEventListener('load',()=>{
+      Limagem=cores.width
+      LargSprite=Limagem/nunSpries
+      posIniX=LargSprite*numSprite
+      //Imagem, XiniRecorte, YiniRecorte, LRecorte, ARecorte, posX, posY, Limagem, Aimagem
+      ctx.drawImage(cores,posIniX,numSprite,0,LargSprite,50, 0, 0,200,200)
+    })
+    let anima=setInterval(() => {
+      numSprite++
+      if(numSprite>3)
+      numSprite=0
+      posIniX=LargSprite*numSprite
+      //Imagem, XiniRecorte, YiniRecorte, LRecorte, ARecorte, posX, posY, Limagem, Aimagem
+      ctx.drawImage(cores,posIniX,0,LargSprite,50, 0, 0,200,200)
+    },1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFB Cursos js aula 136 Movendo imagens</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+      background-color: rgb(32, 31, 31);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="desenho1" width="500" height="500"></canvas>
+  <script>
+    document.write('Aula pronta')
+    let canvas=document.getElementById("desenho1")
+    let ctx=canvas.getContext('2d')
+
+    const teclado={
+      cima:false,
+      baixo:false,
+      esquerda:false,
+      direita:false
+    }
+
+    window.addEventListener('keydown',(event)=>{
+      if(event.keyCode==37){//Esquerda
+        teclado.esquerda=true
+      }else if(event.keyCode==39){//Direita
+        teclado.direita=true
+      }
+      if(event.keyCode==38){//Cima
+        teclado.cima=true
+      }else if(event.keyCode==40){//Baixo
+        teclado.baixo=true
+      }
+    })
+
+    window.addEventListener('keyup',(event)=>{
+      if(event.keyCode==37){//Esquerda
+        teclado.esquerda=false
+      }else if(event.keyCode==39){//Direita
+        teclado.direita=false
+      }
+      if(event.keyCode==38){//Cima
+        teclado.cima=false
+      }else if(event.keyCode==40){//Baixo
+        teclado.baixo=false
+      }
+    })
+
+    const game=()=>{
+      ctx.clearRect(0,0,canvas.width, canvas.height)
+      requestAnimationFrame(game)
+    }
+    requestAnimationFrame(game)
+  </script>
+  <script src="jogador.js"></script>
+</body>
+</html>
